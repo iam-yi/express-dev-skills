@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+
+<h1>New Skills</h1>
+<form action="/skills" method="POST" autocomplete="off">
+Type: <input type="text" name="type"><br>
+Attack: <input type="text" name="attack"><br>
+Value: <input type="text" name="value"><br>
+<button type="submit">Save Skill</button>
+</form>
+
+<%- include('../partials/footer') %>

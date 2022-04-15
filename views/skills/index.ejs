@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+    <h1>Pokemon Most Powerful Attack Lists</h1>
+    <ul>
+        <% skills.forEach(function(t) { %>
+            <li>
+                <form action="/skills/<%= t.no %>?_method=DELETE"
+                    class="delete-form" method="POST">
+                    <button type="submit">X</button>
+                </form>
+                <a href="/skills/<%= t.no %>"><%= t.type %>: <%= t.attack %> <%= t.value %> </a>  
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/skills/new">Add a New skill</a>
+
+     <%- include('../partials/footer') %>
+
